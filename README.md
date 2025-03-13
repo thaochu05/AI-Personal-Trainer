@@ -25,12 +25,12 @@ exercise uses the same standardized logic, meticulously designed to ensure accur
 effectiveness. For an easier explanation of this approach, we will employ the Bicep Curl as a
 paradigmatic example for elucidation within this report. 
 
-### 1. **Real-Time Posture Detection**
+#### 1. **Real-Time Posture Detection**
 - MediaPipe Pose employs machine learning for precise body pose tracking in videos. It uses BlazePose, integrating COCO, BlazeFace, and BlazePalm functionalities, to detect 33 body landmarks in an RGB frame. The system follows a two-stage detection-tracking pipeline: first, it detects the region of interest (ROI) to locate the person, and then, it tracks and predicts pose landmarks within the ROI using a cropped frame.
   
   ![image](https://github.com/user-attachments/assets/5fae06e8-6893-4cdd-8c84-96d0c7572d1b)
 
-### 2. **Choosing Frontal and Side View for Posture Analysis**
+#### 2. **Choosing Frontal and Side View for Posture Analysis**
 Selecting the appropriate viewpoint for capturing a user’s movement is crucial for accurate fitness analysis.
 
 - **Frontal View**: This view enables the system to analyze both the left and right sides of the body. It is useful for exercises where symmetry matters, such as overhead presses, side planks, crunches, and curls. In our web application, the frontal view is primarily used for dumbbell fly exercises.
@@ -38,7 +38,7 @@ Selecting the appropriate viewpoint for capturing a user’s movement is crucial
 
 Given our focus on Bicep Curl analysis, where precise vertical inclinations are necessary, we prioritize the **side view** for optimal accuracy.
 
-### 2. **Bicep Curl Form Analysis**
+#### 3. **Bicep Curl Form Analysis**
 To evaluate bicep curl form, we analyze specific body landmarks:
 - **Shoulder-elbow angle**
 - **Elbow-wrist angle**
@@ -52,7 +52,7 @@ Additionally, we compute the offset angle between the nose and shoulders to ensu
 
   ![image](https://github.com/user-attachments/assets/a679a3ae-33ec-4010-86f7-10287a57b49c)
 
-#### **State Tracking for Bicep Curls**
+#### 4. **State Tracking for Bicep Curls**
 We implement a state transition system to monitor bicep curl execution:
 1. **State (s1) - Normal Phase:** The user stands straight with an elbow angle between 145° and 200°.
 2. **State (s2) - Transition Phase:** The elbow angle decreases to between 85° and 144° as the curl progresses.
@@ -64,7 +64,7 @@ We also incorporate an **inactivity timer** that resets the counters if no motio
 
 ![image](https://github.com/user-attachments/assets/59769cac-c80e-4b5e-beb5-c8ab7bbbed48)
 
-#### **Aplication Workflow** 
+#### 5. **Aplication Workflow** 
 This application workflow follows a methodology inspired by the LearnOpenCV [website](learnopencv.com)
 
 ![image](https://github.com/user-attachments/assets/501a4fb2-da87-45fb-817d-9d9227acf693)
@@ -72,7 +72,7 @@ This application workflow follows a methodology inspired by the LearnOpenCV [web
 Detailed explaination can be found in report.
 
 
-### 4. **Feedback System**
+#### 6. **Feedback System**
 - Provides **instant correction suggestions** based on detected posture deviations, highlighting areas that need adjustment.
 - Uses **reinforcement learning techniques** to refine posture detection and feedback accuracy over time.
 - Implements **audio-visual guidance** for users, enabling interactive engagement and self-improvement in workout form.
@@ -82,7 +82,7 @@ Detailed explaination can be found in report.
 
 
 ### B. PERSONALIZED EXERCISE PLANS GENERATOR
-### 3. **Personalized Exercise Plans**
+
 - A **machine learning-based recommendation system** tailors exercise plans to individual users based on fitness levels, goals, and posture performance.
 - The system dynamically **adjusts difficulty and exercises** based on user progress and real-time posture feedback.
   ![image](https://github.com/user-attachments/assets/fd07832b-a543-47a6-b76f-79401dafac3d)
