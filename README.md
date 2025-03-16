@@ -125,7 +125,7 @@ Detailed explaination can be found in report.
    ```
 3. **Run the application:**
    ```sh
-   streamlit run <path_to_homepage.py>
+   streamlit run <Homepage.py>
    ```
 4. **Follow the on-screen instructions to analyze your posture and get personalized workout recommendations.**
 
