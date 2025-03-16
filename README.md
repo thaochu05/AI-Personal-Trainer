@@ -117,7 +117,7 @@ Detailed explaination can be found in report.
 ## How to Use This Repository
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-repo-name.git
+   git clone https://github.com/thaochu05/AI-Personal-Trainer.git 
    ```
 2. **Install dependencies:**
    ```sh
